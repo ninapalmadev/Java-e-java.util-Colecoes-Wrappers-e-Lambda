@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 
-public class Teste {
+public class TesteArrayList {
 
 	public static void main(String[] args) {
-		
+		//<> generics
 		ArrayList<Conta> lista = new ArrayList<Conta>();
 		
 		Conta cc = new ContaCorrente(22, 11);
@@ -19,7 +19,7 @@ public class Teste {
         
         System.out.println("Tamanho depois de add: " + lista.size());
         
-        Conta ref = (Conta)lista.get(0);
+        Conta ref = lista.get(0);
         System.out.println(ref.getNumero());
         
         lista.remove(0);
@@ -47,8 +47,8 @@ public class Teste {
         
         System.out.println("COM FOR ATUALIZADO USANDO ':' ");
         
-        for(Object oRef : lista) {
-        	System.out.println(oRef);
+        for(Conta conta : lista) {
+        	System.out.println(conta);
         }
         
 	}
