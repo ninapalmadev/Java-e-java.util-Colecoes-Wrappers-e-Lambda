@@ -113,6 +113,10 @@ public abstract class Conta extends Object {
 		return "Numero: " + this.numero + ", Agencia: " + this.agencia;
 	}
     
+    @Override
+    public int compareTo(Conta outra) {
+            return Double.compare(this.saldo, outra.saldo);
+    }
     
 
 }
